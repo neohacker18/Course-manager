@@ -13,8 +13,9 @@ const CourseForm=()=>{
 
         addCourse({
             id: Math.ceil(Math.random()*1000000), 
-            tilte: courseTitle
+            title: courseTitle
         })
+        setcourseTitle("");
     }
 
   return (
@@ -22,7 +23,7 @@ const CourseForm=()=>{
         <input type="text" className="form-input" value={courseTitle} onChange={(e)=>setcourseTitle(e.target.value)}/>
         <button className="form-submit-btn" onClick={()=>{
             handleCourseSubmit();
-        }}></button>
+        }}>Add Course</button>
     </div>
   )
 }
